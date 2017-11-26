@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Green Spades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="formApp">
+
+<form class="form-group" ng-controller="categoryCtrl">   
+    <div id='outerForm'>
+        <div  id="form">
+                <div data-spy="scroll" data-target="#outerForm" data-offset="50" >
+                    <span class="smClr">Categories*</span>
+                    <select   ng-model="name" ng-options="item for item in items" ></select> 
+                </div>
+                <div id="btmForm">
+                    <span >Products</span>
+                    <input ng-model="name" required id="prod">
+                    <span class="smClr">Quantity*</span>
+                    <input type="number" required type="number" name="quantity" min="1" max="50">
+                    <span class="smClr">Amount*</span>
+                    <input type="number" required>
+                    <span>Amt</span>
+                </div> 
+        </div>  
+        <button id="add" class="btn" ng-submit="addItem()">ADD</button>
+    </div>      
+</form>  
+
+</body>
+
+</html>
